@@ -6,7 +6,7 @@
 
 ;;; Add all sub-directories under ~/.emacs.d into the load-path
 (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-    (let* ((my-lisp-dir "~/Emacs_Config/site-lisp")
+    (let* ((my-lisp-dir "~/.emacs.d/")
 	   (default-directory my-lisp-dir))
       (setq load-path (cons my-lisp-dir load-path))
       (normal-top-level-add-subdirs-to-load-path)))
@@ -19,7 +19,7 @@
 
 ;; Add auto-complete package while loading
 
-(add-to-list 'load-path "~/.emacs.d/auto-complete/")
+;(add-to-list 'load-path "~/.emacs.d/auto-complete/")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
 (ac-config-default)
@@ -197,15 +197,15 @@ menu, add it to the menu bar."
 
 ;; cedet configuration
 
-(load-file "~/Emacs_Config/site-lisp/cedet-1.0pre7/common/cedet.el")
+(load-file "~/.emacs.d/site-lisp/cedet-1.0pre7/common/cedet.el")
 ;(global-ede-mode 1)                      ; Enable the Project management system
 (semantic-load-enable-excessive-code-helpers)      ; Enable prototype help and smart completion
+
 (setq senator-minor-mode "SN")
 (setq semantic-imenu-auto-rebuild-directory-indexes nil)
 (global-srecode-minor-mode 1)            ; Enable template insertion menu
 (global-semantic-mru-bookmark-mode 1)
 (require 'semantic-decorate-include)
-
 ;; smart completion 
 (require 'semantic-ia)
 

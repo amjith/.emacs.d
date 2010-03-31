@@ -4548,7 +4548,7 @@ Returns the insertion point."
 (define-key viper-vi-basic-map "v" 'vimpulse-visual-toggle-normal)
 (define-key viper-vi-basic-map "V" 'vimpulse-visual-toggle-line)
 (define-key viper-vi-basic-map "\C-v" 'vimpulse-visual-toggle-block)
-(define-key viper-vi-basic-map "\C-p" 'yank-rectangle)
+;(define-key viper-vi-basic-map "\C-p" 'yank-rectangle)
 (define-key viper-vi-basic-map "gv" 'vimpulse-visual-restore)
 
 (define-key vimpulse-visual-basic-map "v" 'vimpulse-visual-toggle-normal)

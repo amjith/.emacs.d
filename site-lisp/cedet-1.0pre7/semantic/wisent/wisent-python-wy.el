@@ -3,7 +3,7 @@
 ;; Copyright (C) 2002, 2003, 2004, 2007 Richard Kim
 
 ;; Author:  <amjidanutpan@AMJIDANUTPAN>
-;; Created: 2010-03-23 11:41:13-0600
+;; Created: 2010-03-31 08:44:11-0600
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
