@@ -197,7 +197,7 @@ menu, add it to the menu bar."
 
 ;; cedet configuration
 
-(load-file "~/cedet-1.0pre7/common/cedet.el")
+(load-file "~/Emacs_Config/site-lisp/cedet-1.0pre7/common/cedet.el")
 ;(global-ede-mode 1)                      ; Enable the Project management system
 (semantic-load-enable-excessive-code-helpers)      ; Enable prototype help and smart completion
 (setq senator-minor-mode "SN")
