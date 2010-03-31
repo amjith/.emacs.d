@@ -352,5 +352,8 @@ menu, add it to the menu bar."
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/site-lisp/yasnippet-0.6.1c/snippets/")
 
+;; ido-mode
+(require 'ido)
+(ido-mode t)
 
 ;; End of file.
