@@ -346,4 +346,11 @@ menu, add it to the menu bar."
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-log-done t)
 
+
+;; Snippets 
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/site-lisp/yasnippet-0.6.1c/snippets/")
+
+
 ;; End of file.
