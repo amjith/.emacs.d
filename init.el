@@ -250,6 +250,7 @@ menu, add it to the menu bar."
 ;; end cedet config
 
 ; Mouse settings
+;(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mosue 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
@@ -360,5 +361,9 @@ menu, add it to the menu bar."
 
 ;; ECB related config
 (require 'ecb-autoloads)     ; Load ECB after M-x ecb-activate
+
+;; Testing cscope in emacs
+(require 'xcscope)
+(setq cscope-do-not-update-database t)
 
 ;; End of file.
