@@ -188,7 +188,8 @@ menu, add it to the menu bar."
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(ecb-options-version "2.40")
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(org-agenda-files (quote ("~/org/test.org"))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -325,8 +326,10 @@ menu, add it to the menu bar."
 ;;;
 
 ;; Ide-skel 
-;; (require 'tabbar)
-;; (require 'ide-skel)
+(require 'tabbar)
+(require 'ide-skel)
+(global-set-key [C-prior] 'tabbar-backward)
+(global-set-key [C-next]  'tabbar-forward)
 
 ;; optional, but useful - see Emacs Manual
 (partial-completion-mode)
@@ -365,5 +368,4 @@ menu, add it to the menu bar."
 ;; Testing cscope in emacs
 (require 'xcscope)
 (setq cscope-do-not-update-database t)
-
 ;; End of file.
