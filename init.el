@@ -204,7 +204,6 @@ menu, add it to the menu bar."
 (load-file "~/.emacs.d/site-lisp/cedet-1.0pre7/common/cedet.el")
 ;(global-ede-mode 1)                      ; Enable the Project management system
 (semantic-load-enable-excessive-code-helpers)      ; Enable prototype help and smart completion
-
 (setq senator-minor-mode "SN")
 (setq semantic-imenu-auto-rebuild-directory-indexes nil)
 (global-srecode-minor-mode 1)            ; Enable template insertion menu
@@ -212,6 +211,8 @@ menu, add it to the menu bar."
 (require 'semantic-decorate-include)
 ;; smart completion 
 (require 'semantic-ia)
+(global-semantic-stickyfunc-mode -1)
+
 
 (setq-mode-local c-mode semanticdb-find-default-throttle
                  '(project unloaded system recursive))
