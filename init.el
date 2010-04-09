@@ -187,7 +187,9 @@ menu, add it to the menu bar."
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(ecb-layout-window-sizes (quote (("amjith1-left-right" (0.16097560975609757 . 0.26666666666666666) (0.16097560975609757 . 0.5333333333333333) (0.16097560975609757 . 0.13333333333333333) (0.17073170731707318 . 0.9333333333333334)))))
  '(ecb-options-version "2.40")
+ '(ecb-windows-width 0.2)
  '(inhibit-startup-screen t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
