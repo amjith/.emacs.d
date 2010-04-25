@@ -371,4 +371,21 @@ menu, add it to the menu bar."
 ;; Testing cscope in emacs
 (require 'xcscope)
 (setq cscope-do-not-update-database t)
+
+;; code checking via flymake
+;; set code checker here from "epylint", "pyflakes"
+(setq pycodechecker "pyflakes")
+(when (load "flymake" t)
+  (defun flymake-pycodecheck-init ()
+    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-inplace))
+           (local-file (file-relative-name
+                        temp-file
+                        (file-name-directory buffer-file-name))))
+      (list pycodechecker (list local-file))))
+  (add-to-list 'flymake-allowed-file-name-masks
+               '("\\.py\\'" flymake-pycodecheck-init)))
+
+(load-library "flymake-cursor")
+
 ;; End of file.
