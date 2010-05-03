@@ -187,17 +187,24 @@ menu, add it to the menu bar."
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
  '(ecb-layout-window-sizes (quote (("amjith1-left-right" (0.16097560975609757 . 0.26666666666666666) (0.16097560975609757 . 0.5333333333333333) (0.16097560975609757 . 0.13333333333333333) (0.17073170731707318 . 0.9333333333333334)))))
  '(ecb-options-version "2.40")
- '(org-agenda-files (quote ("~/org/test.org")))
  '(ecb-windows-width 0.2)
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(org-agenda-files (quote ("~/org/Notes.org" "~/org/test.org")))
+ '(show-paren-mode t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- )
+ '(tabbar-button-highlight ((t (:inherit tabbar-button))))
+ '(tabbar-default ((t (:inherit variable-pitch :background "gray82" :foreground "gray50" :height 0.8))))
+ '(tabbar-highlight ((t nil)))
+ '(tabbar-selected ((t (:inherit tabbar-default :background "white" :foreground "blue" :box (:line-width 1 :color "black")))))
+ '(tabbar-separator ((t (:inherit tabbar-default :height 0.2))))
+ '(tabbar-unselected ((t (:inherit tabbar-default :background "gray72" :foreground "black" :box (:line-width 1 :color "black"))))))
 
 ;; cedet configuration
 
@@ -371,4 +378,10 @@ menu, add it to the menu bar."
 ;; Testing cscope in emacs
 (require 'xcscope)
 (setq cscope-do-not-update-database t)
+
+;; Automatically close braces, quotes etc.
+
+(require 'autopair)
+(autopair-global-mode) ;; enable autopair in all buffers 
+
 ;; End of file.
