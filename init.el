@@ -384,8 +384,15 @@ menu, add it to the menu bar."
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers 
 
+;; Special case for python triple quotes
+(add-hook 'python-mode-hook
+	  #'(lambda ()
+	      (setq autopair-handle-action-fns
+		    (list #'autopair-default-handle-action
+			  #'autopair-python-triple-quote-action))))
+
 ;; code checking via flymake
-;; set code checker here from "epylint", "pyflakes"
+;; set code checker here from "pyflakes"
 (setq pycodechecker "pyflakes")
 (when (load "flymake" t)
   (defun flymake-pycodecheck-init ()
@@ -397,6 +404,10 @@ menu, add it to the menu bar."
       (list pycodechecker (list local-file))))
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pycodecheck-init)))
+
+(require 'flymake)
+;; Enable flymake-mode automatically
+(add-hook 'find-file-hook 'flymake-find-file-hook)
 
 (load-library "flymake-cursor")
 
